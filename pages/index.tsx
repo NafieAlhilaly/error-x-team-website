@@ -49,7 +49,7 @@ const Home: NextPage = () => {
               </Row>
               <Row gap={1} justify='center'>
                 <Button auto css={{ display: 'inline' }}><Text b css={{ color: 'black' }}><Link href='#form'>الآن</Link></Text></Button>
-                <Text css={{ color: '$white', marginTop: 6 }} b size={25}>حول فكرتك إلى مشروع</Text>
+                <Text css={{ color: '$white', marginTop: 6 }} b size={22}>حول فكرتك إلى مشروع</Text>
               </Row>
             </Grid>
           </Grid.Container>
@@ -132,22 +132,25 @@ const Home: NextPage = () => {
       <Spacer y={3}/>
       <footer className={styles.footer}>
         <Grid.Container>
-          <Grid xs={true} >
-            <Row dir='rtl' gap={1}>
-              <Text b>تابعنا على</Text>
+          <Grid xs={true}>
+            <Row gap={1}>
               <Grid css={{ paddingRigth: 5, paddingLeft: 5 }}>
-                <Image src={insta} alt='email icon' width={20} height={20} />
+                <Image src={insta} alt='email icon' width={40} height={40} />
               </Grid>
               <Grid css={{ paddingRigth: 5, paddingLeft: 5 }}>
-                <Image src={twitter} alt='email icon' width={20} height={20} />
+                <Image src={twitter} alt='email icon' width={40} height={40} />
               </Grid>
               <Grid css={{ paddingRigth: 5, paddingLeft: 5 }}>
-                <Image src={whatsapp} alt='email icon' width={20} height={20} />
+                <Image src={whatsapp} alt='email icon' width={40} height={40} />
               </Grid>
             </Row>
           </Grid>
-          <Grid>
-            <Text> 2022 xجميع الحقوق محفوظة إيررور</Text>
+          <Grid xs={true} md={true} dir='rtl'>
+            <Row gap={0.1}>
+              <Text size={12}> جميع الحقوق محفوظة إيررورx </Text>
+              <Text size={12}> @ 2022 </Text>
+            </Row>
+            
           </Grid>
         </Grid.Container>
       </footer>
