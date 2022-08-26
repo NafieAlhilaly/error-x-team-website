@@ -43,15 +43,13 @@ const Home: NextPage = () => {
             <Grid>
               <Image src={RocketGIF} alt='rocket gif' width={300} height={300} />
             </Grid>
-            <Grid>
               <Row dir='rtl' justify='center' css={{ marginLeft: 39 }}>
                 <Text b >أعظم المشاريع بدأت <Text b css={{ color: '#D9E73C' }}>بفكرة</Text></Text>
               </Row>
               <Row gap={1} justify='center'>
                 <Button auto css={{ display: 'inline' }}><Text b css={{ color: 'black' }}><Link href='#form'>الآن</Link></Text></Button>
-                <Text css={{ color: '$white', marginTop: 6 }} b size={22}>حول فكرتك إلى مشروع</Text>
+                <Text css={{ color: '$white', marginTop: 6 }} b size={22} dir='rtl'>حول فكرتك إلى مشروع</Text>
               </Row>
-            </Grid>
           </Grid.Container>
         </Container>
       </main>
@@ -135,13 +133,13 @@ const Home: NextPage = () => {
           <Grid xs={true}>
             <Row gap={1}>
               <Grid css={{ paddingRigth: 5, paddingLeft: 5 }}>
-                <Image src={insta} alt='email icon' width={40} height={40} />
+                <Image src={insta} alt='email icon' width={30} height={30} />
               </Grid>
               <Grid css={{ paddingRigth: 5, paddingLeft: 5 }}>
-                <Image src={twitter} alt='email icon' width={40} height={40} />
+                <Image src={twitter} alt='email icon' width={30} height={30} />
               </Grid>
               <Grid css={{ paddingRigth: 5, paddingLeft: 5 }}>
-                <Image src={whatsapp} alt='email icon' width={40} height={40} />
+                <Image src={whatsapp} alt='email icon' width={30} height={30} />
               </Grid>
             </Row>
           </Grid>
