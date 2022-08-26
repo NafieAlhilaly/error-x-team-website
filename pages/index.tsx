@@ -1,4 +1,4 @@
-import { Button, Container, Grid, Row, Spacer, Text} from '@nextui-org/react'
+import { Button, Container, Grid, Row, Spacer, Text } from '@nextui-org/react'
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
@@ -43,15 +43,17 @@ const Home: NextPage = () => {
             <Grid>
               <Image src={RocketGIF} alt='rocket gif' width={300} height={300} />
             </Grid>
-            <Grid>
-              <Row dir='rtl' justify='center' css={{ marginLeft: 39 }}>
-                <Text b >أعظم المشاريع بدأت <Text b css={{ color: '#D9E73C' }}>بفكرة</Text></Text>
-              </Row>
-              <Row gap={1} justify='center'>
+            <Row dir='rtl' justify='center' css={{ marginLeft: 39, minWidth: 370}}>
+              <Text b size={16}>أعظم المشاريع بدأت <Text b css={{ color: '#D9E73C' }}>بفكرة</Text></Text>
+            </Row>
+            <Grid.Container justify='center'>
+              <Grid>
                 <Button auto css={{ display: 'inline' }}><Text b css={{ color: 'black' }}><Link href='#form'>الآن</Link></Text></Button>
-                <Text css={{ color: '$white', marginTop: 6 }} b size={25}>حول فكرتك إلى مشروع</Text>
-              </Row>
-            </Grid>
+              </Grid>
+              <Grid>
+                <Text css={{ color: '$white', marginTop: 6 }} b size={20} dir='rtl'>حول فكرتك إلى مشروع</Text>
+              </Grid>
+            </Grid.Container>
           </Grid.Container>
         </Container>
       </main>
@@ -68,7 +70,7 @@ const Home: NextPage = () => {
             <Text b size={14}>فريق يصنع الأفكار قبل كل شيء. انطلق إررورx بفريق بكفاءات وخبرات عالية، تتمحور فكرة اررورx في إنشاء وتطوير الافكار عن طريق الجلوس بجانب المتلقي كصديق يفهمه. ولكن في الوقت ذاته، نظرتنا عالمية استرشادا بأفضل التجارب الدولية، والعمل بأفضل الممارسات في نطاق أعمالنا. شُكّلت فكرة اررورx بمجموعة من الكلمات التي تشكل كلمة ERROR، فنحن فريق من الخبراء (Experts) مثابرون من دون الشعور بالتعب (Restless, Revolutionary) وملتزمين وشديدي الدقة (Observant) في تقديم خدمات تقنية يعتمد عليها (Reliable). فقيمنا تتجسد في ERROR والتي نحرص على التفاصيل فيها: شغفنا، فاعليتنا، وثقتنا، وتناغمنا. نحرص في علاقتنا مع عملائنا على تقديم اقتراحاتنا بمنتهى المهنية والابتكار، للوصول مع عملائنا إلى نتائج تساهم في نمو وازدهار أعمالهم.</Text>
           </Grid>
         </Grid.Container>
-        <Grid.Container gap={1}>
+        <Grid.Container gap={1} justify='center'>
           <Grid>
             <FahadCard />
           </Grid>
@@ -129,12 +131,11 @@ const Home: NextPage = () => {
       <Container id='form'>
         <SendIdeaForm />
       </Container>
-      <Spacer y={3}/>
+      <Spacer y={3} />
       <footer className={styles.footer}>
         <Grid.Container>
-          <Grid xs={true} >
-            <Row dir='rtl' gap={1}>
-              <Text b>تابعنا على</Text>
+          <Grid>
+            <Row gap={1}>
               <Grid css={{ paddingRigth: 5, paddingLeft: 5 }}>
                 <Image src={insta} alt='email icon' width={20} height={20} />
               </Grid>
@@ -146,8 +147,12 @@ const Home: NextPage = () => {
               </Grid>
             </Row>
           </Grid>
-          <Grid>
-            <Text> 2022 xجميع الحقوق محفوظة إيررور</Text>
+          <Grid xs={true} md={true} dir='rtl'>
+            <Row gap={0.1}>
+              <Text size={12}> جميع الحقوق محفوظة إيررورx </Text>
+              <Text size={12}> @ 2022 </Text>
+            </Row>
+
           </Grid>
         </Grid.Container>
       </footer>

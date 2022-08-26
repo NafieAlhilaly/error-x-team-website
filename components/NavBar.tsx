@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function NavBar() {
     return (
-        <Container css={{ marginTop: 20, position: 'fixed', zIndex: 999, borderRadius: 9, padding: 12, bgBlur: '$gray50' }}>
+        <Container css={{ marginTop: 20, position: 'fixed', zIndex: 999, borderRadius: 9, padding: 12, bgBlur: '$gray50' }} justify='center'>
             <Grid.Container >
                 <Grid xs={2}>
                     <Row css={{ marginTop: 4 }} gap={1}>
